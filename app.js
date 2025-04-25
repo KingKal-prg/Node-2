@@ -108,3 +108,12 @@ app.post('/convert-mp3', async (req, res) => {
 app.listen(PORT, () => {
     console.log(`Listening on port ${PORT}`);
 });
+module.exports = async (req, res) => {
+  try {
+    // Your YouTube MP3 downloader logic goes here.
+    res.status(200).send("Function executed successfully!");
+  } catch (error) {
+    console.error("Error in app.js:", error);
+    res.status(500).send("Internal Server Error");
+  }
+};
